@@ -21,19 +21,19 @@ public class ProjectRestController {
 	
 	private ProjectService projectService;
 	
-	// Inject Employee DAO
+	// Inject Credential Service
 	@Autowired
 	public ProjectRestController(ProjectService theProjectService) {
 		projectService = theProjectService;
 	}
 	
-	// Expose "/employees" and return the List of Employees 
+	// Expose "/projects" and return the List of Projects
 	@GetMapping("/projects")
 	public List<Project> findAll() {
 		return projectService.findAll();
 	}
 	
-	// Add Mapping for GET /employees/{employeeId}
+	// Add Mapping for GET /projects/{projectCode}
 	@GetMapping("/projects/{projectCode}")
 	public Project getProject(@PathVariable int projectCode) {
 		Project theProject = projectService.findById(projectCode);
@@ -43,7 +43,7 @@ public class ProjectRestController {
 		return theProject;
 	}
 	
-	// Add Mapping for POST /employees
+	// Add Mapping for POST /projects
 	@PostMapping("/projects")
 	public Project addProject(@RequestBody Project theProject) {
 		theProject.setProjectCode(0);
@@ -51,14 +51,14 @@ public class ProjectRestController {
 		return theProject;
 	}
 	
-	// Add Mapping for PUT /employees - update employee details
+	// Add Mapping for PUT /projects - update project details
 	@PutMapping("/projects")
 	public Project updateProject(@RequestBody Project theProject) {
 		projectService.save(theProject);
 		return theProject;
 	}
 	
-	// Add Mapping for DELETE /employees/{employeeId} - delete employee
+	// Add Mapping for DELETE /projects/{projectCode} - delete project
 	@DeleteMapping("/projects/{projectCode}")
 	public String deleteProject(@PathVariable int projectCode) {
 		Project theProject = projectService.findById(projectCode);

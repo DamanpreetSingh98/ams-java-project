@@ -49,14 +49,14 @@ INSERT INTO project VALUES
 	(05,'Spartacus','Integration Business Unit',3);
     
     
-CREATE TABLE credentials (
+CREATE TABLE credential (
   emp_num int default NULL,
   emp_name varchar(45) NOT NULL,
   password varchar(50) NOT NULL,
   auth_token varchar(100) DEFAULT NULL
 );
 
-INSERT INTO credentials VALUE 
+INSERT INTO credential VALUE 
 	(1,'John Doe','pass@123', null),
     (2,'Andrew','pass@123', null),
     (3,'David','pass@123', null),
@@ -64,14 +64,22 @@ INSERT INTO credentials VALUE
     (5,'Jessica','pass@123', null);
   
 
-ALTER table project
-ADD FOREIGN KEY (ibu_head_id) REFERENCES employee(emp_num);
+-- ALTER table project
+-- ADD FOREIGN KEY (ibu_head_id) REFERENCES employee(emp_num)
+-- on delete cascade
+-- on update cascade;
 
-ALTER table employee
-ADD FOREIGN KEY (project_code) REFERENCES project(project_code);
+-- ALTER table employee
+-- ADD FOREIGN KEY (project_code) REFERENCES project(project_code)
+-- on delete cascade
+-- on update cascade;
 
-ALTER table credentials
-ADD FOREIGN KEY (emp_num) REFERENCES employee(emp_num);
+-- ALTER table credential
+-- ADD FOREIGN KEY (emp_num) REFERENCES employee(emp_num)
+-- on delete cascade
+-- on update cascade;
 
-ALTER table credentials
-ADD  primary key (emp_num);
+-- ALTER table credential
+-- ADD  primary key (emp_num);
+
+-- delete from employee where emp_num=5;
