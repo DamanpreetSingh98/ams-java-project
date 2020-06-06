@@ -1,7 +1,5 @@
 package com.project.ams.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,29 +18,20 @@ public class Employee {
 	@Column(name="emp_num")
 	private int empNum;
 	
-	@Column(name="password")
-	private String password;
-	
 	@Column(name="emp_name")
 	private String empName;
 	
 	@Column(name="emp_type")
 	private String empType;
 	
-	@Column(name="curr_designation")
-	private String currentDesignation;
+	@Column(name="curr_ibu")
+	private String currentIBU;
 	
 	@Column(name="project_code")
 	private String projectCode;
 	
 	@Column(name="location")
 	private String location;
-	
-	@Column(name="project_name")
-	private String projectName;
-	
-	@Column(name="ibu")
-	private String ibu;
 	
 	@Column(name="permanent_address")
 	private String premanentAddress;
@@ -54,16 +43,16 @@ public class Employee {
 	private String passportNumber;
 	
 	@Column(name="passport_issue_date")
-	private Date passportIssueDate;
+	private String passportIssueDate;
 	
 	@Column(name="passport_expiry_date")
-	private Date passportExpiryDate;
+	private String passportExpiryDate;
 	
 	@Column(name="issuing_office")
 	private String issuingOffice;
 	
 	@Column(name="mobile_number")
-	private int mobileNumber;
+	private String mobileNumber;
 	
 	@Column(name="educational_qualifications")
 	private String educationalQualifications;
@@ -83,21 +72,16 @@ public class Employee {
 	
 	// Define Constructor
 	public Employee() {}
-
-
-	public Employee(String password, String empName, String empType, String currentDesignation, String projectCode,
-			String location, String projectName, String ibu, String premanentAddress, String localAddress,
-			String passportNumber, Date passportIssueDate, Date passportExpiryDate, String issuingOffice,
-			int mobileNumber, String educationalQualifications, String skills, int yearsExp, String prevEmployers,
-			String prevDesignation) {
-		this.password = password;
+	
+	public Employee(String empName, String empType, String currentIBU, String projectCode, String location,
+			String premanentAddress, String localAddress, String passportNumber, String passportIssueDate,
+			String passportExpiryDate, String issuingOffice, String mobileNumber, String educationalQualifications,
+			String skills, int yearsExp, String prevEmployers, String prevDesignation) {
 		this.empName = empName;
 		this.empType = empType;
-		this.currentDesignation = currentDesignation;
+		this.currentIBU = currentIBU;
 		this.projectCode = projectCode;
 		this.location = location;
-		this.projectName = projectName;
-		this.ibu = ibu;
 		this.premanentAddress = premanentAddress;
 		this.localAddress = localAddress;
 		this.passportNumber = passportNumber;
@@ -112,230 +96,162 @@ public class Employee {
 		this.prevDesignation = prevDesignation;
 	}
 
-	
-	// Define Getter/Setter
 
+	// Define Getter/Setter
 	public int getEmpNum() {
 		return empNum;
 	}
-
 
 	public void setEmpNum(int empNum) {
 		this.empNum = empNum;
 	}
 
-
-	public String getPassword() {
-		return password;
-	}
-
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-
 	public String getEmpName() {
 		return empName;
 	}
-
 
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
 
-
 	public String getEmpType() {
 		return empType;
 	}
-
 
 	public void setEmpType(String empType) {
 		this.empType = empType;
 	}
 
-
-	public String getCurrentDesignation() {
-		return currentDesignation;
+	public String getCurrentIBU() {
+		return currentIBU;
 	}
 
-
-	public void setCurrentDesignation(String currentDesignation) {
-		this.currentDesignation = currentDesignation;
+	public void setCurrentIBU(String currentIBU) {
+		this.currentIBU = currentIBU;
 	}
-
 
 	public String getProjectCode() {
 		return projectCode;
 	}
 
-
 	public void setProjectCode(String projectCode) {
 		this.projectCode = projectCode;
 	}
-
 
 	public String getLocation() {
 		return location;
 	}
 
-
 	public void setLocation(String location) {
 		this.location = location;
 	}
-
-
-	public String getProjectName() {
-		return projectName;
-	}
-
-
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
-	}
-
-
-	public String getIbu() {
-		return ibu;
-	}
-
-
-	public void setIbu(String ibu) {
-		this.ibu = ibu;
-	}
-
 
 	public String getPremanentAddress() {
 		return premanentAddress;
 	}
 
-
 	public void setPremanentAddress(String premanentAddress) {
 		this.premanentAddress = premanentAddress;
 	}
-
 
 	public String getLocalAddress() {
 		return localAddress;
 	}
 
-
 	public void setLocalAddress(String localAddress) {
 		this.localAddress = localAddress;
 	}
-
 
 	public String getPassportNumber() {
 		return passportNumber;
 	}
 
-
 	public void setPassportNumber(String passportNumber) {
 		this.passportNumber = passportNumber;
 	}
 
-
-	public Date getPassportIssueDate() {
+	public String getPassportIssueDate() {
 		return passportIssueDate;
 	}
 
-
-	public void setPassportIssueDate(Date passportIssueDate) {
+	public void setPassportIssueDate(String passportIssueDate) {
 		this.passportIssueDate = passportIssueDate;
 	}
 
-
-	public Date getPassportExpiryDate() {
+	public String getPassportExpiryDate() {
 		return passportExpiryDate;
 	}
 
-
-	public void setPassportExpiryDate(Date passportExpiryDate) {
+	public void setPassportExpiryDate(String passportExpiryDate) {
 		this.passportExpiryDate = passportExpiryDate;
 	}
-
 
 	public String getIssuingOffice() {
 		return issuingOffice;
 	}
 
-
 	public void setIssuingOffice(String issuingOffice) {
 		this.issuingOffice = issuingOffice;
 	}
 
-
-	public int getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
 
-
-	public void setMobileNumber(int mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-
 
 	public String getEducationalQualifications() {
 		return educationalQualifications;
 	}
 
-
 	public void setEducationalQualifications(String educationalQualifications) {
 		this.educationalQualifications = educationalQualifications;
 	}
-
 
 	public String getSkills() {
 		return skills;
 	}
 
-
 	public void setSkills(String skills) {
 		this.skills = skills;
 	}
-
 
 	public int getYearsExp() {
 		return yearsExp;
 	}
 
-
 	public void setYearsExp(int yearsExp) {
 		this.yearsExp = yearsExp;
 	}
-
 
 	public String getPrevEmployers() {
 		return prevEmployers;
 	}
 
-
 	public void setPrevEmployers(String prevEmployers) {
 		this.prevEmployers = prevEmployers;
 	}
-
 
 	public String getPrevDesignation() {
 		return prevDesignation;
 	}
 
-
 	public void setPrevDesignation(String prevDesignation) {
 		this.prevDesignation = prevDesignation;
 	}
-
+	
 
 	// Define toString Method
-	
 	@Override
 	public String toString() {
-		return "Employee [empNum=" + empNum + ", password=" + password + ", empName=" + empName + ", empType=" + empType
-				+ ", currentDesignation=" + currentDesignation + ", projectCode=" + projectCode + ", location="
-				+ location + ", projectName=" + projectName + ", ibu=" + ibu + ", premanentAddress=" + premanentAddress
-				+ ", localAddress=" + localAddress + ", passportNumber=" + passportNumber + ", passportIssueDate="
-				+ passportIssueDate + ", passportExpiryDate=" + passportExpiryDate + ", issuingOffice=" + issuingOffice
-				+ ", mobileNumber=" + mobileNumber + ", educationalQualifications=" + educationalQualifications
-				+ ", skills=" + skills + ", yearsExp=" + yearsExp + ", prevEmployers=" + prevEmployers
-				+ ", prevDesignation=" + prevDesignation + "]";
+		return "Employee [empNum=" + empNum + ", empName=" + empName + ", empType=" + empType + ", currentIBU="
+				+ currentIBU + ", projectCode=" + projectCode + ", location=" + location + ", premanentAddress="
+				+ premanentAddress + ", localAddress=" + localAddress + ", passportNumber=" + passportNumber
+				+ ", passportIssueDate=" + passportIssueDate + ", passportExpiryDate=" + passportExpiryDate
+				+ ", issuingOffice=" + issuingOffice + ", mobileNumber=" + mobileNumber + ", educationalQualifications="
+				+ educationalQualifications + ", skills=" + skills + ", yearsExp=" + yearsExp + ", prevEmployers="
+				+ prevEmployers + ", prevDesignation=" + prevDesignation + "]";
 	}
 }
