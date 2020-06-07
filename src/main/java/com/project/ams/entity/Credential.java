@@ -16,8 +16,8 @@ public class Credential {
 	@Column(name="emp_num")
 	private int empNum;
 	
-	@Column(name="emp_name")
-	private String empName;
+	@Column(name="emp_type")
+	private String empType;
 	
 	@Column(name="password")
 	private String password;
@@ -28,9 +28,9 @@ public class Credential {
 	// Define Constructor
 	public Credential() {}
 
-	public Credential(int empNum, String empName, String password, String authToken) {
+	public Credential(int empNum, String empType, String password, String authToken) {
 		this.empNum = empNum;
-		this.empName = empName;
+		this.empType = empType;
 		this.password = password;
 		this.authToken = authToken;
 	}
@@ -45,12 +45,12 @@ public class Credential {
 		this.empNum = empNum;
 	}
 
-	public String getEmpName() {
-		return empName;
+	public String getEmpType() {
+		return empType;
 	}
 
-	public void setEmpName(String empName) {
-		this.empName = empName;
+	public void setEmpType(String empType) {
+		this.empType = empType;
 	}
 
 	public String getPassword() {
@@ -73,7 +73,7 @@ public class Credential {
 	// Define toString Method
 	@Override
 	public String toString() {
-		return "Credentials [empNum=" + empNum + ", empName=" + empName + ", password=" + password + ", authToken="
+		return "Credentials [empNum=" + empNum + ", empType=" + empType + ", password=" + password + ", authToken="
 				+ authToken + "]";
 	}
 	

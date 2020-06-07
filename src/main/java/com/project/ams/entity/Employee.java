@@ -21,9 +21,6 @@ public class Employee {
 	@Column(name="emp_name")
 	private String empName;
 	
-	@Column(name="emp_type")
-	private String empType;
-	
 	@Column(name="curr_ibu")
 	private String currentIBU;
 	
@@ -73,12 +70,11 @@ public class Employee {
 	// Define Constructor
 	public Employee() {}
 	
-	public Employee(String empName, String empType, String currentIBU, String projectCode, String location,
+	public Employee(String empName, String currentIBU, String projectCode, String location,
 			String premanentAddress, String localAddress, String passportNumber, String passportIssueDate,
 			String passportExpiryDate, String issuingOffice, String mobileNumber, String educationalQualifications,
 			String skills, int yearsExp, String prevEmployers, String prevDesignation) {
 		this.empName = empName;
-		this.empType = empType;
 		this.currentIBU = currentIBU;
 		this.projectCode = projectCode;
 		this.location = location;
@@ -112,14 +108,6 @@ public class Employee {
 
 	public void setEmpName(String empName) {
 		this.empName = empName;
-	}
-
-	public String getEmpType() {
-		return empType;
-	}
-
-	public void setEmpType(String empType) {
-		this.empType = empType;
 	}
 
 	public String getCurrentIBU() {
@@ -246,7 +234,7 @@ public class Employee {
 	// Define toString Method
 	@Override
 	public String toString() {
-		return "Employee [empNum=" + empNum + ", empName=" + empName + ", empType=" + empType + ", currentIBU="
+		return "Employee [empNum=" + empNum + ", empName=" + empName + ", currentIBU="
 				+ currentIBU + ", projectCode=" + projectCode + ", location=" + location + ", premanentAddress="
 				+ premanentAddress + ", localAddress=" + localAddress + ", passportNumber=" + passportNumber
 				+ ", passportIssueDate=" + passportIssueDate + ", passportExpiryDate=" + passportExpiryDate
