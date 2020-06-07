@@ -39,11 +39,11 @@ CREATE TABLE project (
 );
 
 INSERT INTO project VALUES 
-	(01,'Salesforce','Sales Business Unit',5),
-	(02,'CX Integration','Integration Business Unit',2),
-	(03,'ILM','Analytics Business Unit',4),
-	(04,'Cloud Analytics','Analytics Business Unit',1),
-	(05,'Spartacus','Integration Business Unit',3);
+	(01,'Salesforce'),
+	(02,'CX Integration'),
+	(03,'ILM'),
+	(04,'Cloud Analytics'),
+	(05,'Spartacus');
     
     
 CREATE TABLE credential (
