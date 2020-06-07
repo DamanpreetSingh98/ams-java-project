@@ -64,22 +64,20 @@ INSERT INTO credential VALUE
     (5,'Jessica','pass@123', null);
   
 
--- ALTER table project
--- ADD FOREIGN KEY (ibu_head_id) REFERENCES employee(emp_num)
--- on delete cascade
--- on update cascade;
+ALTER table project
+ADD FOREIGN KEY (ibu_head_id) REFERENCES employee(emp_num)
+on delete set null
+on update no action;
 
--- ALTER table employee
--- ADD FOREIGN KEY (project_code) REFERENCES project(project_code)
--- on delete cascade
--- on update cascade;
+ALTER table employee
+ADD FOREIGN KEY (project_code) REFERENCES project(project_code)
+on delete SET NULL
+on update no action;
 
--- ALTER table credential
--- ADD FOREIGN KEY (emp_num) REFERENCES employee(emp_num)
--- on delete cascade
--- on update cascade;
+ALTER table credential
+ ADD FOREIGN KEY (emp_num) REFERENCES employee(emp_num)
+ on delete cascade
+ on update no action;
 
--- ALTER table credential
--- ADD  primary key (emp_num);
-
--- delete from employee where emp_num=5;
+-- delete from employee where emp_num=4;
+-- delete from PROJECT where project_code=4; 
