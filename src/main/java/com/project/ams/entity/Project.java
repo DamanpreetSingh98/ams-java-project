@@ -20,20 +20,12 @@ public class Project {
 	@Column(name="project_name")
 	private String projectName;
 	
-	@Column(name="ibu")
-	private String ibu;
-	
-	@Column(name="ibu_head_id")
-	private String ibuHeadID;
-	
 	
 	// Define Constructor
 	public Project() {}
 
-	public Project(String projectName, String ibu, String ibuHeadID) {
+	public Project(String projectName) {
 		this.projectName = projectName;
-		this.ibu = ibu;
-		this.ibuHeadID = ibuHeadID;
 	}
 
 	
@@ -53,28 +45,11 @@ public class Project {
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
-
-	public String getIbu() {
-		return ibu;
-	}
-
-	public void setIbu(String ibu) {
-		this.ibu = ibu;
-	}
-
-	public String getIbuHeadID() {
-		return ibuHeadID;
-	}
-
-	public void setIbuHeadID(String ibuHeadID) {
-		this.ibuHeadID = ibuHeadID;
-	}
 	
 	
 	// Define toString Method
 	@Override
 	public String toString() {
-		return "Project [projectCode=" + projectCode + ", projectName=" + projectName + ", ibu=" + ibu
-				+ ", ibuHeadID=" + ibuHeadID + "]";
+		return "Project [projectCode=" + projectCode + ", projectName=" + projectName;
 	}
 }

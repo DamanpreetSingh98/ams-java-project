@@ -34,8 +34,6 @@ INSERT INTO employee VALUES
 CREATE TABLE project (
   project_code int auto_increment NOT NULL,
   project_name varchar(50) DEFAULT NULL,
-  ibu varchar(45) DEFAULT NULL,
-  ibu_head_id int default NULL,
   
   PRIMARY KEY (project_code)
 );
@@ -62,11 +60,6 @@ INSERT INTO credential VALUE
     (4,'normal','pass@123', null),
     (5,'admin','pass@123', null);
   
-
-ALTER table project
-ADD FOREIGN KEY (ibu_head_id) REFERENCES employee(emp_num)
-on delete set null
-on update no action;
 
 ALTER table employee
 ADD FOREIGN KEY (project_code) REFERENCES project(project_code)
