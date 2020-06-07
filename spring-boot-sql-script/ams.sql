@@ -4,7 +4,6 @@ USE `ams_directory`;
 CREATE TABLE employee (
   emp_num int auto_increment NOT NULL,
   emp_name varchar(45) DEFAULT NULL,
-  emp_type varchar(10) DEFAULT NULL,
   curr_ibu varchar(45) DEFAULT NULL,
   project_code int DEFAULT NULL,
   location varchar(20) DEFAULT NULL,
@@ -25,11 +24,11 @@ CREATE TABLE employee (
 );
 
 INSERT INTO employee VALUES 
-	(1,'John Doe','super','Analytics Business Unit','04','USA','12 St, USA','12 St, USA','P123456','2000-07-24','2020-07-23','USA', 7011338879 , 'MBA', 'Project Management',20,'Oracle', 'Senior Developer'),
-	(2,'Andrew','normal','Integration Business Unit','02','USA','30, Wellington Square, USA','30, Wellington Square, USA','P007007','2010-12-14','2030-12-13','USA', 981338879 , 'MCA', '.NET, JAVA', 5 ,'NA', 'NA'),
-	(3,'David','normal','Integration Business Unit','01','UK','221-B Baker Street, London','221-B Baker Street, London','P234432','2015-08-29','2035-08-28','London', 8911338879 , 'M.Tech', 'JAVA, Springboot, Node.js',10,'Microsoft','Associate Developer'),
-	(4,'Nick','normal','Analytics Business Unit','03','Gotham','1007 Mountain Drive','1007 Mountain Drive','P198876','2008-05-07','2028-05-06','Gotham', 7011234981 , 'Engineering in CS', 'UI/UX Expert',15,'Microsoft', 'UI/UX Developer'),
-	(5,'Jessica','admin','Sales Business Unit','01','USA','10880 Malibu Point, USA','10880 Malibu Point, USA','P696969','2011-10-17','2021-10-16','USA', 9811322134 , 'MBA, M.Tech', 'Master Engineer, Project Management', 25 ,'Stark Industries', 'Product Manager');
+	(1,'John Doe','Analytics Business Unit','04','USA','12 St, USA','12 St, USA','P123456','2000-07-24','2020-07-23','USA', 7011338879 , 'MBA', 'Project Management',20,'Oracle', 'Senior Developer'),
+	(2,'Andrew','Integration Business Unit','02','USA','30, Wellington Square, USA','30, Wellington Square, USA','P007007','2010-12-14','2030-12-13','USA', 981338879 , 'MCA', '.NET, JAVA', 5 ,'NA', 'NA'),
+	(3,'David','Integration Business Unit','01','UK','221-B Baker Street, London','221-B Baker Street, London','P234432','2015-08-29','2035-08-28','London', 8911338879 , 'M.Tech', 'JAVA, Springboot, Node.js',10,'Microsoft','Associate Developer'),
+	(4,'Nick','Analytics Business Unit','03','Gotham','1007 Mountain Drive','1007 Mountain Drive','P198876','2008-05-07','2028-05-06','Gotham', 7011234981 , 'Engineering in CS', 'UI/UX Expert',15,'Microsoft', 'UI/UX Developer'),
+	(5,'Jessica','Sales Business Unit','01','USA','10880 Malibu Point, USA','10880 Malibu Point, USA','P696969','2011-10-17','2021-10-16','USA', 9811322134 , 'MBA, M.Tech', 'Master Engineer, Project Management', 25 ,'Stark Industries', 'Product Manager');
 
 
 CREATE TABLE project (
@@ -51,17 +50,17 @@ INSERT INTO project VALUES
     
 CREATE TABLE credential (
   emp_num int default NULL,
-  emp_name varchar(45) NOT NULL,
+  emp_type varchar(10) DEFAULT NULL,
   password varchar(50) NOT NULL,
   auth_token varchar(100) DEFAULT NULL
 );
 
 INSERT INTO credential VALUE 
-	(1,'John Doe','pass@123', null),
-    (2,'Andrew','pass@123', null),
-    (3,'David','pass@123', null),
-    (4,'Nick','pass@123', null),
-    (5,'Jessica','pass@123', null);
+	(1,'super','pass@123', null),
+    (2,'normal','pass@123', null),
+    (3,'normal','pass@123', null),
+    (4,'normal','pass@123', null),
+    (5,'admin','pass@123', null);
   
 
 ALTER table project
