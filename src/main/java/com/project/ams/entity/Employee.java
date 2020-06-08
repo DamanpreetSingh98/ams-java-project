@@ -58,7 +58,7 @@ public class Employee {
 	private String skills;
 	
 	@Column(name="years_exp")
-	private int yearsExp;
+	private String yearsExp;
 	
 	@Column(name="prev_employers")
 	private String prevEmployers;
@@ -73,7 +73,7 @@ public class Employee {
 	public Employee(String empName, String currentIBU, String projectCode, String location,
 			String premanentAddress, String localAddress, String passportNumber, String passportIssueDate,
 			String passportExpiryDate, String issuingOffice, String mobileNumber, String educationalQualifications,
-			String skills, int yearsExp, String prevEmployers, String prevDesignation) {
+			String skills, String yearsExp, String prevEmployers, String prevDesignation) {
 		this.empName = empName;
 		this.currentIBU = currentIBU;
 		this.projectCode = projectCode;
@@ -206,11 +206,11 @@ public class Employee {
 		this.skills = skills;
 	}
 
-	public int getYearsExp() {
+	public String getYearsExp() {
 		return yearsExp;
 	}
 
-	public void setYearsExp(int yearsExp) {
+	public void setYearsExp(String yearsExp) {
 		this.yearsExp = yearsExp;
 	}
 

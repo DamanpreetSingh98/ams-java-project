@@ -13,10 +13,10 @@ CREATE TABLE employee (
   passport_issue_date date DEFAULT NULL,
   passport_expiry_date date DEFAULT NULL,
   issuing_office varchar(30) DEFAULT NULL,
-  mobile_number double DEFAULT NULL,
+  mobile_number varchar(10) DEFAULT NULL,
   educational_qualifications varchar(100) DEFAULT NULL,
   skills varchar(100) DEFAULT NULL,
-  years_exp int DEFAULT NULL,
+  years_exp varchar(2) DEFAULT NULL,
   prev_employers varchar(100) DEFAULT NULL,
   prev_designation varchar(45) DEFAULT NULL,
 
@@ -24,11 +24,11 @@ CREATE TABLE employee (
 );
 
 INSERT INTO employee VALUES 
-	(1,'John Doe','Analytics Business Unit','04','USA','12 St, USA','12 St, USA','P123456','2000-07-24','2020-07-23','USA', 7011338879 , 'MBA', 'Project Management',20,'Oracle', 'Senior Developer'),
-	(2,'Andrew','Integration Business Unit','02','USA','30, Wellington Square, USA','30, Wellington Square, USA','P007007','2010-12-14','2030-12-13','USA', 981338879 , 'MCA', '.NET, JAVA', 5 ,'NA', 'NA'),
-	(3,'David','Integration Business Unit','01','UK','221-B Baker Street, London','221-B Baker Street, London','P234432','2015-08-29','2035-08-28','London', 8911338879 , 'M.Tech', 'JAVA, Springboot, Node.js',10,'Microsoft','Associate Developer'),
-	(4,'Nick','Analytics Business Unit','03','Gotham','1007 Mountain Drive','1007 Mountain Drive','P198876','2008-05-07','2028-05-06','Gotham', 7011234981 , 'Engineering in CS', 'UI/UX Expert',15,'Microsoft', 'UI/UX Developer'),
-	(5,'Jessica','Sales Business Unit','01','USA','10880 Malibu Point, USA','10880 Malibu Point, USA','P696969','2011-10-17','2021-10-16','USA', 9811322134 , 'MBA, M.Tech', 'Master Engineer, Project Management', 25 ,'Stark Industries', 'Product Manager');
+	(1,'John Doe','Analytics Business Unit','04','USA','12 St, USA','12 St, USA','P123456','2000-07-24','2020-07-23','USA', "7011338879" , 'MBA', 'Project Management',"20",'Oracle', 'Senior Developer'),
+	(2,'Andrew','Integration Business Unit','02','USA','30, Wellington Square, USA','30, Wellington Square, USA','P007007','2010-12-14','2030-12-13','USA', "981338879" , 'MCA', '.NET, JAVA', "5" ,'NA', 'NA'),
+	(3,'David','Integration Business Unit','01','UK','221-B Baker Street, London','221-B Baker Street, London','P234432','2015-08-29','2035-08-28','London', "8911338879" , 'M.Tech', 'JAVA, Springboot, Node.js',"10",'Microsoft','Associate Developer'),
+	(4,'Nick','Analytics Business Unit','03','Gotham','1007 Mountain Drive','1007 Mountain Drive','P198876','2008-05-07','2028-05-06','Gotham', "7011234981" , 'Engineering in CS', 'UI/UX Expert',"15",'Microsoft', 'UI/UX Developer'),
+	(5,'Jessica','Sales Business Unit','01','USA','10880 Malibu Point, USA','10880 Malibu Point, USA','P696969','2011-10-17','2021-10-16','USA', "9811322134" , 'MBA, M.Tech', 'Master Engineer, Project Management', "25" ,'Stark Industries', 'Product Manager');
 
 
 CREATE TABLE project (
